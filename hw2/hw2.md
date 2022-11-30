@@ -1,3 +1,33 @@
+# Advanced Database Course - Homework 2 Answers
+
+## Table of Contents
+
+1. [Question 1](#q1)
+   1. [Result](#result)
+2. [Question 2](#q2)
+   1. [note](#note)
+   2. [Result](#result-1)
+3. [Question 3](#q3)
+   1. [description](#description)
+   2. [Result](result-2)
+4. [Question 4](#q4)
+   1. [description](#description-1)
+   2. [Result](result-3)
+5. [Question 5](#q5)
+6. [Question 6](#q6)
+   1. [description](#description-2)
+7. [Question 7](#q7)
+   1. [Result](result-4)
+8. [Question 8](#q8)
+   1. [description](#description-3)
+   2. [Result](result-5)
+9. [Question 9](#q9)
+    1. [Added Rows](#added-rows)
+10. [Question 10](#q10)
+   1. [description](#description-4)
+   2. [Result](result-6)
+11. [Question 11](#q11)
+
 ## Q1
 
 ```sql
