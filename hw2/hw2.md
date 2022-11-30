@@ -46,6 +46,10 @@ WHERE AlbumID % 23 = 0
 ORDER BY AlbumID;
 ```
 
+#### description:
+
+SQLite `%` arithmetic operator divides the left-hand operand by the right-hand operand and returns the remainder.
+
 ### Result
 
 | AlbumID |
@@ -68,6 +72,10 @@ SELECT FirstName || ', ' || LastName as Name
 FROM Employee
 ORDER BY length(Name);
 ```
+
+#### description:
+
+SQLite `||` operator allows you to concatenate 2 or more strings together.
 
 ### Result
 
@@ -100,7 +108,7 @@ CREATE TABLE IF NOT EXISTS Login
         CONSTRAINT Login_pk
             PRIMARY KEY,
     Password   VARCHAR NOT NULL,
-    LastUpdate DATE DEFAULT current_timestamp,
+    LastUpdate DATE DEFAULT (datetime('now', 'localtime')),
     Status     VARCHAR,
     CustomerID INTEGER
         CONSTRAINT Login_Customer_CustomerID_fk
@@ -108,6 +116,13 @@ CREATE TABLE IF NOT EXISTS Login
     CHECK (Status IN ('active', 'inactive'))
 );
 ```
+
+#### description:
+
+The `datetime()` function returns a datetime value in this format: `YYYY-MM-DD HH:MM:SS`. \
+The `now` time string returns the current date and time. \
+The `localtime` modifier instructs the function to return the local time. \
+SQLite `CHECK` constraints allow you to define expressions to test values whenever they are inserted into or updated within a column.
 
 ## Q7
 
@@ -146,6 +161,11 @@ GROUP BY A.AlbumID
 HAVING Price >= 30
 ORDER BY Price DESC;
 ```
+
+#### description:
+
+The `sum()` function is an aggregate function that returns the sum the non-NULL values or only the distinct values in a group. \
+The `round()` function returns a floating-point value that represents value rounded to a specified length or precision.
 
 ### Result
 
@@ -202,6 +222,10 @@ HAVING count(DISTINCT G.Name) > 1
 ORDER BY Title;
 ```
 
+#### description:
+The `count()` function is an aggregate function that returns the number of items in a group. \
+The `group_concat()` function is an aggregate function that concatenates all non-null values in a column.
+
 ### Result
 
 | Title                          | Genres                                    |
@@ -233,4 +257,3 @@ BEGIN
             old.Composer, old.Millisecond, old.Byte, old.UnitPrice);
 END;
 ```
-
